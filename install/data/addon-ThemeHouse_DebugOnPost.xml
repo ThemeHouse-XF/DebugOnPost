@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="ThemeHouse_DebugOnPost" title="[⌂] Debug On Post" version_string="1.0.0" version_id="1447261019" url="http://xf.themehouse.io/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="template_post_render" execute_order="10" callback_class="ThemeHouse_DebugOnPost_Listener_TemplatePostRender" callback_method="templatePostRender" active="1" hint="" description=""/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases/>
+  <route_prefixes/>
+  <style_properties/>
+  <templates>
+    <template title="th_debug_info_debugonpost.css" version_id="1352403471" version_string="1.0.0"><![CDATA[#DebugInfo
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 99999;
+	width: 100%;
+}
+
+#DebugInfo div
+{
+	padding: 8px;
+}
+
+#DebugInfo h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+	font-weight: bold;
+}
+ 
+#DebugInfo h2 {
+	font-size: 1.5em;
+	margin: 0.83em 0;
+	font-weight: bold;
+}
+ 
+#DebugInfo h3 {
+	font-size: 1.17em;
+	margin: 1em 0;
+	font-weight: bold;
+}
+ 
+#DebugInfo h4 {
+	font-size: 1em;
+	margin: 1.33em 0;
+	font-weight: bold;
+}
+ 
+#DebugInfo h5 {
+	font-size: 0.83em;
+	margin: 1.67em 0;
+	font-weight: bold;
+}
+ 
+#DebugInfo h6 {
+	font-size: 0.75em;
+	margin: 2.33em 0;
+	font-weight: bold;
+}
+
+#DebugInfo ol {
+	margin: 1em 0;
+	padding: 0 0 0 40px;
+}
+
+#DebugInfo ol, #DebugInfo li {
+	list-style-type: decimal;
+}
+
+#DebugInfo pre {
+	margin: 1em 0px;
+}
+
+#DebugInfo table {
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+
+#DebugInfo th {
+	font-weight: bold;
+}
+
+#DebugInfo td, #DebugInfo th {
+	vertical-align: center;
+	padding: 1px;
+}]]></template>
+  </templates>
+  <public_template_modifications>
+    <modification template="footer" modification_key="th_copyrightNotice_debugOnPost" description="Copyright notice for [⌂] Debug On Post" execution_order="1" enabled="1" action="callback">
+      <find><![CDATA[/{xen:phrase (?:xenforo|extra)_copyright}/]]></find>
+      <replace><![CDATA[ThemeHouse_Listener_InitDependencies::copyrightNotice]]></replace>
+    </modification>
+  </public_template_modifications>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
